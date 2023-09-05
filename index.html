@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+    
+        <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<style>
+
+    body{
+        height:100%;
+        width:100%;
+        overflow-x: hidden;
+    }
+    .sidebar::-webkit-scrollbar{
+        width:1px;
+        background-color: transparent;
+        transition:opacity .5s ease-in-out;
+    }
+    .hero-image{
+        background-image: url("images/fashion1.webp");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+</style>
+<body>
+    <nav class="fixed top-0 bg-transparent flex px-5  lg:px-9 py-6 lg:py-9 justify-between items-center w-full">
+
+        <!-- hamburger part start  -->
+        <div class="hamburger-section flex space-x-5 items-center font-mono">
+            <i class="fa-solid fa-bars cursor-pointer" id="hamburger"></i>
+
+            <div class="nav-item-section hidden lg:block text-gray-700">
+                <ul class="flex space-x-5 items-center">
+                    <li><a href="#">Main</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">Product</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- hamburger part end  -->
+
+        <!-- logo part start  -->
+        <div class="logo-section">
+            <img src="images/logo.webp" class="h-9 relative lg:-left-20">
+        </div>
+        <!-- logo part end  -->
+
+        <!-- shopping cart  -->
+        <div class="flex space-x-6 text-gray-700 items-center">
+           <div class="hidden lg:flex lg:space-x-6 items-center">
+            <span>Login</span>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-regular fa-heart"></i>
+           </div>
+            <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+        </div>
+        <!-- shopping cart end  -->
+
+    </nav>
+
+    <!-- side bar start  -->
+    <div id="Sidebar" class="sidebar fixed z-50 px-11 bg-white pt-10 pb-24 flex flex-col w-[450px] h-screen space-y-4 overflow-scroll transition-all duration-200 opacity-25 delay-100 ease-linear -translate-x-[450px]">
+        <!-- cross icon start -->
+        <div class="text-[20px] p-1 w-7 rounded-full bg-gray-200 flex items-center cursor-pointer justify-center" id="cross">
+            <i class="fa-sharp fa-solid fa-xmark"></i>
+        </div>
+        <!-- cross icon end  -->
+
+        <!-- search button part  -->
+        <input type="text" class="border-b-2 border-b-gray-800 py-4" placeholder="search products...">
+        <!-- search button end  -->
+
+        <!-- nav start  -->
+        <div class="nav-item-section2 text-gray-700 text-xl relative top-9 pb-20 bg-white border-b-[1px] border-b-gray-700">
+            <ul class="relative flex flex-col space-y-9 items-start justify-start uppercase">
+                <li><a href="#">Main</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Product</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <!-- nav end  -->
+
+        <!-- login start  -->
+        <div class="flex justify-between text-gray-700 relative top-9 py-5 border-b-[1px] border-b-gray-700 text-xl">
+            <span>Login</span>
+            <i class="fa-solid fa-user"></i>
+        </div>
+        <!-- login end  -->
+
+        <!-- cart and wishlist  start-->
+      <div class="flex flex-col space-y-4 relative top-12">
+        <div class="flex justify-between text-gray-700 relative  py-1 text-xl">
+            <span>Cart</span>
+            <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+        <div class="flex justify-between text-gray-700 relative border-b-[1px] border-b-gray-700 pt-1 pb-4 text-xl">
+            <span>Wishlist</span>
+            <i class="fa-regular fa-heart"></i>
+        </div>
+      </div>
+        <!-- cart and wishlist end  -->
+
+        <!-- icons part  -->
+        <div class="relative top-10 flex space-x-8 py-8 px-3 text-2xl">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-twitter"></i>
+        </div>
+        <!-- icons part end -->
+
+    </div>
+    <!-- side bar end  -->
+
+    <!-- home image start  -->
+       <div class="hero-image relative h-screen -z-10 flex flex-col justify-center items-center lg:justify-center lg:items-end lg:pr-32 space-y-8">
+        <h3 class="bg-gray-900 p-2 rounded-lg text-gray-100">Summer '19</h3>
+        <h1 class="text-5xl text-gray-900 text-center lg:text-6xl">Night Summer Dresses</h1>
+        <a class="text-gray-600 text-2xl font-medium lg:text-3xl">Shop Now</a>
+       </div>
+    <!-- home image end  -->
+
+    <!-- best selling part start  -->
+    <div class="pt-28 pb-14 bg-white space-y-7 px-6 md:px-14 lg:px-24">
+        <h1 class="text-5xl text-gray-900 text-center">Best Selling</h1>
+        <p class="text-center text-gray-600 text-[18px]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque blanditinima libero, culpa cumque recusandae error hic quibusdam nam nisi voluptai?</p>
+    </div>
+    <!-- best selling part end  -->
+
+        <!-- best selling talako start  -->
+        <!-- this is purano method that i used to use for product listing but tala maile grid-cols of tailwind css is used jasle yesto condition ma help garxa  -->
+    <div class=" flex flex-wrap  px-4 gap-y-5 sm:px-7 lg:px-12">
+        <div name="product" class="w-[50%] md:w-[33.33%] px-2 bg-white">
+            <img src="images/fashion3.jpg" alt="" class="w-full h-auto max-w-[300px] max-h-[350px] aspect-square object-cover">
+            <h2 class="mt-3 text-gray-800 text-md">Cashmere Tank + Bag</h2>
+            <h3 class="text-gray-500 text-sm mt-2">$39.00 - $98.00</h3>
+        </div>
+        <div name="product" class="w-[50%] md:w-[33.33%] px-2 bg-white">
+            <img src="images/fashion4.jpg" alt="" class="w-full h-auto max-w-[300px] max-h-[350px] aspect-square object-cover">
+            <h2 class="mt-3 text-gray-800 text-md">Cashmere Tank + Bag</h2>
+            <h3 class="text-gray-500 text-sm mt-2">$39.00 - $98.00</h3>
+        </div>
+        <div name="product" class="w-[50%] md:w-[33.33%] px-2 bg-white">
+            <img src="images/fashion5.jpg" alt="" class="w-full h-auto max-w-[300px] max-h-[350px] aspect-square object-cover">
+            <h2 class="mt-3 text-gray-800 text-md">Cashmere Tank + Bag</h2>
+            <h3 class="text-gray-500 text-sm mt-2">$39.00 - $98.00</h3>
+        </div>
+    </div>
+        <!-- best selling talako end  -->
+
+    <!-- testimonial start  -->
+    <div class="bg-[#f1e8df] py-16 px-16 my-24">
+    <h1 class="text-center text-3xl text-[#282828] font-semibold tracking-wide">Testimonials</h1>
+   
+        <div class="swiper">
+            <div class="slide-container">
+
+                <div class="card-wrapper swiper-wrapper">
+
+                    <div class="card flex flex-col space-y-8 items-center swiper-slide sm:px-10 md:px-16 lg:px-44">
+                        <img src="images/fashion3.jpg" alt="" class="rounded-full h-24 w-24 mt-10">
+
+                            <h2 class="tracking-wide text-center font-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis quidem iure asperiores esse enim inventore cum sunt..</h2>
+
+                            <h1 class="font-semibold text-lg">Prashant Bartaula</h1>
+                            <h3 class="text-[#686868] relative -top-6">Web developer</h3>
+                    </div>
+                    <div class="card flex flex-col space-y-8 items-center swiper-slide sm:px-10 md:px-16 lg:px-44">
+                        <img src="images/fashion5.jpg" alt="" class="rounded-full h-24 w-24 mt-10">
+
+                            <h2 class="tracking-wide text-center font-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis quidem iure asperiores esse enim inventore cum sunt..</h2>
+
+                            <h1 class="font-semibold text-lg">Elon Musk</h1>
+                            <h3 class="text-[#686868] relative -top-6">Marketing director</h3>
+                    </div>
+                    <div class="card flex flex-col space-y-8 items-center swiper-slide sm:px-10 md:px-16 lg:px-44">
+                        <img src="images/fashion2.jpg" alt="" class="rounded-full h-24 w-24 mt-10">
+
+                            <h2 class="tracking-wide text-center font-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis quidem iure asperiores esse enim inventore cum sunt..</h2>
+
+                            <h1 class="font-semibold text-lg">William shakesphere</h1>
+                            <h3 class="text-[#686868] relative -top-6">Designer</h3>
+                    </div>
+
+                </div>
+
+                <div class="swiper-button-next swiper-navBtn opacity-50"></div>
+                <div class="swiper-button-prev swiper-navBtn opacity-50"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+     
+    </div>
+    <!--testimonial end-->
+
+    <!-- trending outfits start  -->
+    <div>
+        <div class="pt-10 pb-14 bg-white space-y-7 px-6 md:px-14 lg:px-24">
+            <h1 class="text-5xl text-gray-900 text-center">Trending Outfits</h1>
+            <p class="text-center text-gray-600 text-[18px] lg:px-28">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque blanditinima libero, culpa cumque recusandae error hic quibusdam nam nisi voluptai?</p>
+        </div>
+    </div>
+    <!-- trending outfits end  -->
+
+    <!-- trending outfit talako start  -->
+    <!-- this is the method in  taliwind css jasle sajilai product listing garna help garxa -->
+    <div class="px-4 mb-32 sm:px-7 grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-y-5 lg:px-16 xl:px-24">
+        <div name="product" class="px-2 bg-white">
+            <img src="images/fashion3.jpg" alt="" class="w-full  max-w-[300px]  aspect-square object-cover">
+            <h2 class="mt-3 text-gray-800 text-md">Cashmere Tank + Bag</h2>
+            <h3 class="text-gray-500 text-sm mt-2">$39.00 - $98.00</h3>
+        </div>
+        <div name="product" class="px-2 bg-white">
+            <img src="images/fashion6.jpg" alt="" class="w-full  max-w-[300px]  aspect-square object-cover">
+            <h2 class="mt-3 text-gray-800 text-md">Cashmere Tank + Bag</h2>
+            <h3 class="text-gray-500 text-sm mt-2">$39.00 - $98.00</h3>
+        </div>
+        <div name="product" class="px-2 bg-white">
+            <img src="images/fashion5.jpg" alt="" class="w-full  max-w-[300px]  aspect-square object-cover">
+            <h2 class="mt-3 text-gray-800 text-md">Cashmere Tank + Bag</h2>
+            <h3 class="text-gray-500 text-sm mt-2">$39.00 - $98.00</h3>
+        </div>
+        <div name="product" class="px-2 bg-white">
+            <img src="images/fashion2.jpg" alt="" class="w-full  max-w-[300px]  aspect-square object-cover">
+            <h2 class="mt-3 text-gray-800 text-md">Cashmere Tank + Bag</h2>
+            <h3 class="text-gray-500 text-sm mt-2">$39.00 - $98.00</h3>
+        </div>
+    </div>
+    <!-- trending outfit talako end  -->
+
+    <!-- visit us start  -->
+    <div class="pt-5 pb-14 bg-white space-y-10 px-6 md:px-14 lg:px-24">
+        <h1 class="text-5xl text-gray-900 text-center">Visit us</h1>
+        <p class="text-center text-gray-600 text-[18px] md:px-20 lg:px-28 [word-spacing:2px]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque blanditinima libero, culpa cumque recusandae </p>
+        <img src="images/fashion7.jpg" alt="" class="w-full h-auto max-h-[500px] object-cover">
+    </div>
+    <!-- visit us end  -->
+        
+            <!-- footer start  -->
+            <footer class="mt-8 text-gray-600 border-y-2 border-gray-700 border-opacity-40 py-16 px-6 sm:px-8   md:px-14 lg:px-24 flex flex-wrap">
+                <div class="w-[50%] flex flex-col space-y-4 md:w-[33.33%]">
+                    <h1 class="uppercase tracking-wider text-xl">Company </h1>
+                    <ul class="flex flex-col space-y-3 text-lg">
+                        <li><a href="#">Main</a></li>
+                        <li><a href="#">Shop</a></li>
+                        <li><a href="#">Product</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="w-[50%] flex flex-col space-y-4 md:w-[33.33%]">
+                    <h1 class="uppercase tracking-wider text-xl">Help </h1>
+                    <ul class="flex flex-col space-y-3 text-lg">
+                        <li><a href="#">OrderTracking</a></li>
+                        <li><a href="#">FaQ's</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Condition</a></li>
+                    </ul>
+                </div>
+                <div class="w-full md:w-[33.33%] flex flex-col space-y-4 items-center justify-center md:items-start md:justify-start mt-10 md:mt-0">
+                    <h1 class="tracking-wide text-xl">FOLLOW US</h1>
+                    <p>And free shipping on all your orders</p>
+                    <ul class="flex space-x-5 text-xl">
+                        <li><i class="fa-brands fa-facebook"></i></li>
+                        <li><i class="fa-brands fa-twitter"></i></li>
+                        <li><i class="fa-brands fa-instagram"></i></li>
+                        <li><i class="fa-brands fa-pinterest"></i></li>
+                    </ul>
+                </div>
+                <div class="w-full flex flex-col space-y-4 mt-20">
+                    <h1 class="text-center text-3xl text-black [word-spacing:2px]">Sign up now & Get 10% Off</h1>
+                    <p class="text-gray-500 text-base text-center">Be the first to know about all our arrivals</p>
+                    <input type="text" class="p-4 border-2 border-black mt-3 md:mx-20 lg:mx-32" placeholder="Your email address">
+                    <span class="bg-black text-center py-3 text-white md:mx-20 lg:mx-32">Sign up</span>
+                </div>
+            </footer>
+        <!-- footer end  -->
+
+        <!-- last part start  -->
+            <div class="py-6 px-8 md:px-16 flex space-x-7 relative">
+                    <h3>Privacy Policy</h3>
+                    <h3>Terms & Conditions</h3>
+                    <p class="md:absolute md:right-16">@2023 Goya . Wordpress Theme</p>
+            </div>
+            <!-- last part end  -->
+
+<script>
+const cross=document.getElementById("cross")
+const hamburger=document.getElementById("hamburger")
+const sidebar=document.getElementById("Sidebar")
+const Div=document.getElementsByTagName("div")
+hamburger.addEventListener("click", function(){
+    sidebar.style.left="450px";
+    sidebar.style.opacity="1";
+    document.body.style.overflow="hidden"
+})
+cross.addEventListener("click", function(){
+    sidebar.style.left="0px";
+    sidebar.style.opacity="0.2";
+    document.body.style.overflow="scroll"
+})
+
+
+</script>
+
+<script src="js/swiper-bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
